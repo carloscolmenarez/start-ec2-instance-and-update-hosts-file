@@ -1,6 +1,6 @@
 # Start EC2 Instance and Update Hosts File for Windows
 
-A Python script to start an EC2 instance on AWS and update the Windows `hosts` file with the instance's public IP address for many hosts as you want. All in one step!
+A Python script to start an EC2 instance on AWS and update the Windows `hosts` file ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/windows_logo.png) with the instance's public IP address for many hosts as you want. All in one step!
 
 # What it does?
 
@@ -10,6 +10,7 @@ A Python script to start an EC2 instance on AWS and update the Windows `hosts` f
 
 ## Requirements
 
+- Windows ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/windows_logo.png)
 - Python 3.6 or higher
 - An AWS account with an access key credential
 - Administrator permissions on the Windows system to modify the `hosts` file
