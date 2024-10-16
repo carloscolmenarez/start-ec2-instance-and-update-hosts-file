@@ -6,4 +6,5 @@
 - [x] Create another python script to create the .bat file (and .lnk if is possible)
 - [x] Console prompts and comments in english.
 - [x] Instrucctions how to create Access Keys in AWS in README
-- [ ] Create a version for Linux?
+- [x] Check compatibility with Linux.
+- [ ] Improve "how to create accees key in AWS" wiki (with images)
