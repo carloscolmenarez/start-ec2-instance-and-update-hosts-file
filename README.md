@@ -1,42 +1,37 @@
-# Start EC2 Instance and Update Hosts File for Windows
+# Start EC2 Instance and Update Hosts System File
 
-A Python script to start an EC2 instance on AWS and update the Windows `hosts` file ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/windows_logo.png) with the instance's public IP address for many hosts as you want. All in one step!
+A Python script to start your **AWS EC2 instance** and update your computer's `hosts` file with the instance's public IP address for as many hosts as you want. All in one step!
 
-# What it does?
+## What does it do?
 
-- Launch the EC2 instance.
-- Get the instance public IP.
-- Updates the Windows hosts file with the public IP address for the hosts specified in the urls.txt file.
+1. Starts the EC2 instance.
+2. Retrieves the instance's public IP.
+3. Update the system `hosts` file with the public IP for the hosts specified in the `urls.txt` file.
 
 ## Requirements
 
-- Windows ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/windows_logo.png)
-- Python 3.6 or higher
-- An AWS account with an access key credential
-- Administrator permissions on the Windows system to modify the `hosts` file
+- Python 3.6 or higher.
+- An AWS account with access key credentials. Learn [how to create access keys in AWS](https://github.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/wiki/How-to-create-access-keys-in-AWS).
+- Administrator or root permissions to write the `hosts` system file.
 
 ## Dependencies
 
-- boto3
-- python-dotenv
-- pywin32
-
-The necessary dependencies can be installed using `pip`:
+Install the required dependencies using `pip`:
 
 ```bash
-pip install boto3 python-dotenv pywin32
+pip install boto3 python-dotenv
 ```
 
-## Configuration
+## Installation and Configuration
 
 1. Clone the repository:
 
-    ```
+    ```bash
     git clone https://github.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file.git
     cd start-ec2-instance-and-update-hosts-file
     ```
 
-2. Create a .env file in the root directory of the project with the following content:
+2. Create a `.env` file in the root directory of the project with the following content:
 
     ```
     INSTANCE_ID=your_instance_id
@@ -46,37 +41,50 @@ pip install boto3 python-dotenv pywin32
     HOSTS_PATH=C:\Windows\System32\drivers\etc\hosts
     ```
 
-    Replace `your_instance_id`, `your_access_key_id`, `your_secret_access_key`, and `eu-west-1` with your instance ID, AWS credentials (Access Key) and region.
+    Replace `your_instance_id`, `your_access_key_id`, `your_secret_access_key`, and `eu-west-1` with your instance ID, AWS credentials (Access Key), and region. 
+    
+    For Linux, the `HOSTS_PATH` should be `/etc/hosts`.
 
-3. Create a hosts.txt file in the root directory of the project with all the hosts you want to create/update in your Windows `hosts` file with the public IP of the EC2 instance (one host per line). See hosts.txt.example file.
-
-### How to create access keys in AWS:
-
-- Log in AWS Management Console.
-- In the navigation bar on the upper right, choose your user name, and then choose Security credentials.
-- In the access key section, click on "Create access key" button.
-- Select the "Third-party service" option and click next.
-- Set a description tag a click on "Create access key" button to finish.
-
-
+3. Create a `hosts.txt` file in the root directory of the project with the hosts you want to add/update in your `hosts` system file, using the public IP of the EC2 instance (one host per line) See `hosts.txt.example` for reference.
 
 ## Usage
 
-Run the script ``create_windows_shortcut.py`` once to create a Windows "Start EC2 Instance and update hosts" shortcut in your desktop to run the script in one click.
+### For Windows ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/windows_logo.png):
 
-```bash
-python create_windows_shortcut.py
-```
-
-Or, if you prefer to use the terminal, run (as administrator):
+- Open a terminal as an administrator an run:
 
 ```bash
 python start_ec2_instance.py
 ```
 
+### For Linux ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/linux-logo.png):
+
+
+```bash
+sudo python start_ec2_instance.py
+```
+
+## Create a Desktop Shortcut (Only for Windows ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/windows_logo.png)):
+
+If you prefer not to use the terminal, you can create a Windows desktop shortcut.
+
+1. Install the required dependency:
+
+```bash
+pip install pywin32
+```
+
+2. Run the ``create_windows_shortcut.py`` script to create a desktop shortcut called "Start EC2 Instance and Update Hosts". You can then run the script with a single (or double) click.
+
+```bash
+python create_windows_shortcut.py
+```
+
+Now you will have a shortcut in your desktop to run the script just in one click (or two).
+
 ## Notes
 
-- Make sure you have administrator permissions to modify the ``hosts`` file.
+- Ensure you have administrator permissions to modify ``hosts`` file.
 - Do not share your AWS credentials. Use secure methods to manage them.
 
 ## License
