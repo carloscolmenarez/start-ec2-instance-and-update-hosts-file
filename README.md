@@ -6,7 +6,7 @@ A Python script to start your **AWS EC2 instance** and update your computer's `h
 
 1. Starts the EC2 instance.
 2. Retrieves the instance's public IP.
-3. Update the system `hosts` file with the public IP for the hosts specified in the `urls.txt` file.
+3. Update the system `hosts` file with the public IP for the urls specified in the `hosts.txt` file (one per line).
 
 ## Requirements
 
