@@ -18,8 +18,16 @@ A Python script to start your **AWS EC2 instance** and update your computer's `h
 
 Install the required dependencies using `pip`:
 
+
+### For Windows ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/windows_logo.png):
+
 ```bash
-pip install boto3 python-dotenv
+pip install boto3 python-dotenv pywin32
+```
+
+### For Linux ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/linux-logo.png):
+```bash
+sudo pip install boto3 python-dotenv
 ```
 
 ## Installation and Configuration
@@ -43,7 +51,7 @@ pip install boto3 python-dotenv
 
     Replace `your_instance_id`, `your_access_key_id`, `your_secret_access_key`, and `eu-west-1` with your instance ID, AWS credentials (Access Key), and region. 
     
-    For Linux, the `HOSTS_PATH` should be `/etc/hosts`.
+    For Linux ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/linux-logo.png), the `HOSTS_PATH` is usually `/etc/hosts`.
 
 3. Create a `hosts.txt` file in the root directory of the project with the hosts you want to add/update in your `hosts` system file, using the public IP of the EC2 instance (one host per line) See `hosts.txt.example` for reference.
 
@@ -66,15 +74,9 @@ sudo python start_ec2_instance.py
 
 ## Create a Desktop Shortcut (Only for Windows ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/windows_logo.png)):
 
-If you prefer not to use the terminal, you can create a Windows desktop shortcut.
+If you prefer not to use the terminal, you can create a Windows desktop shortcut:
 
-1. Install the required dependency:
-
-```bash
-pip install pywin32
-```
-
-2. Run the ``create_windows_shortcut.py`` script to create a desktop shortcut called "Start EC2 Instance and Update Hosts". You can then run the script with a single (or double) click.
+- Run the ``create_windows_shortcut.py`` script to create a desktop shortcut called "Start EC2 Instance and Update Hosts". You can then run the script with a single (or double) click.
 
 ```bash
 python create_windows_shortcut.py
