@@ -51,7 +51,7 @@ sudo pip install boto3 python-dotenv
 
     Replace `your_instance_id`, `your_access_key_id`, `your_secret_access_key`, and `eu-west-1` with your instance ID, AWS credentials (Access Key), and region. 
     
-    For Linux ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/linux-logo.png), the `HOSTS_PATH` is usually `/etc/hosts`.
+    In Linux ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/linux-logo.png), the `HOSTS_PATH` usually is `/etc/hosts`.
 
 3. Create a `hosts.txt` file in the root directory of the project with the hosts you want to add/update in your `hosts` system file, using the public IP of the EC2 instance (one host per line) See `hosts.txt.example` for reference.
 
