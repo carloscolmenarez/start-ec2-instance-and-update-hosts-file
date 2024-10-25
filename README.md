@@ -76,7 +76,7 @@ sudo python start_ec2_instance.py
 
 If you prefer not to use the terminal, you can create a Windows desktop shortcut:
 
-- Run the ``create_windows_shortcut.py`` script to create a desktop shortcut called "Start EC2 Instance and Update Hosts". You can then run the script with a single (or double) click.
+- Run the ``create_windows_shortcut.py`` script to create a desktop shortcut called "Start EC2 Instance and Update Hosts". Then, you can run the script just clicking on the shortcut.
 
 ```bash
 python create_windows_shortcut.py
