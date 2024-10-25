@@ -57,7 +57,7 @@ sudo pip install boto3 python-dotenv
 
 ## Usage
 
-### For Windows ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/windows_logo.png):
+### On Windows ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/windows_logo.png):
 
 - Open a terminal as an administrator an run:
 
@@ -65,7 +65,7 @@ sudo pip install boto3 python-dotenv
 python start_ec2_instance.py
 ```
 
-### For Linux ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/linux-logo.png):
+### On Linux ![alt text](https://raw.githubusercontent.com/carloscolmenarez/start-ec2-instance-and-update-hosts-file/refs/heads/master/images/linux-logo.png):
 
 
 ```bash
